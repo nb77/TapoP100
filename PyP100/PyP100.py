@@ -102,8 +102,21 @@ class Switchable(Device):
 
 
 class Metering(Device):
-    def getEnergyUsage(self) -> dict:
-        return self.request("get_energy_usage")
+    def getEnergyUsage(self, params) -> dict:
+        return self.request("get_energy_usage", params)
+
+    def getEnergyData(self, params) -> dict:
+        return self.request("get_energy_data", params)
+
+    def getPowerData(self, params) -> dict:
+        return self.request("get_power_data", params)
+
+    def get_device_usage(self) -> dict:
+        return self.request("get_device_usage")
+
+    def get_current_power(self) -> dict:
+        return self.request("get_current_power")
+
 
 
 class Color(Device):
