@@ -102,8 +102,8 @@ class Switchable(Device):
 
 
 class Metering(Device):
-    def getEnergyUsage(self, params) -> dict:
-        return self.request("get_energy_usage", params)
+    def getEnergyUsage(self) -> dict:
+        return self.request("get_energy_usage")
 
     def getEnergyData(self, params) -> dict:
         return self.request("get_energy_data", params)
