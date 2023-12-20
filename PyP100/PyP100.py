@@ -111,10 +111,10 @@ class Metering(Device):
     def getPowerData(self, params) -> dict:
         return self.request("get_power_data", params)
 
-    def get_device_usage(self) -> dict:
+    def getDeviceUsage(self) -> dict:
         return self.request("get_device_usage")
 
-    def get_current_power(self) -> dict:
+    def getCurrentPower(self) -> dict:
         return self.request("get_current_power")
 
 
